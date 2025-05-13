@@ -1,0 +1,72 @@
+body{
+    /* 设置背景图片路径 */
+    background-image: url("../img/background.png");
+    /* 设置背景图片固定 */
+    background-attachment: fixed;
+    /* 设置背景图片大小 */
+    background-size: cover;
+    /* 设置背景图片不重复 */
+    background-repeat: no-repeat;
+    /* 设置背景图片居中 */
+    background-position: center;
+    /* 设置背景图片为透明 */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 设置页面边距为0 */
+    margin: 0px;
+}
+
+.bigbox{
+    margin:25px 25px 50px 25px;
+    background-color:rgb(255, 255, 255,0.85);
+    border-radius: 25px;
+    padding-bottom: 55px;
+}
+
+.text-all{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.bigbox .h1{
+    padding-top: 20px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+.bigbox .h1 .h1-img{
+    padding-bottom: 5px;
+    padding-right: 5px;
+    border-right: 1px solid #ccc;
+    height: 125px;
+    width: 125px;
+}
+
+.bigbox .h1 .h1-img .h1-img-link{
+    height:100%;
+    width:100%;
+}
+
+.bigbox .h1 .h1-img .h1-img-link img{
+    height:100%;
+    width: 100%;
+}
+
+.text{
+    display: flex;
+    margin-top:15px;
+}
+
+.text-left{
+    border-left: 15px ;
+    width:65%;
+}
+
+.text-right{
+    width:30%;
+    border-left: 1px solid #cdcdcd;
+}
+
+.littlebox{
+    border-left:5px rgba(35, 35, 35, 0.64) solid;
+    background-color: rgba(160, 160, 160, 0.64);
+}

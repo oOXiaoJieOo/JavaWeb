@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标题</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .dm{
+            display:flex;
+        }
+        .bt{
+            text-decoration:none;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="bigbox">
+        <div class="h1 text-all">
+            <div class="h1-img">
+                <a class="h1-img-link" href="https://minecraft.com/" title="Gogogo~出发咯！"><img
+                        src="../img/Minecraft.gif"></a>
+            </div>
+            <div>
+                <span title="被发现了呢，只能灭口了 >:(">
+                    <h1>私のWeb学习</h1>
+                </span>
+                <div class="time">2025/5/12</div>
+            </div>
+            <div>
+                日后在此块内“抄袭”其他网站的抽屉实现逻辑>:)
+            </div>
+        </div>
+        <div class="text-all text">
+            <div class="text-left">
+                <div><a href="../main.html">首页</a></div>
+                <div>
+                    此为标签的重点,web学习的关键点,也是我学习的重点,所以我会在此记录学习过程中的一些关键点,以便日后查阅。<br>
+                    当然,各个标签都有许多可供添加的属性,在此不可能全部实现,仅展示部分属性及其用法,若想了解更多属性用法请参考左边栏目中的HTML网站参考文档。<br>
+                    <div>
+                        多媒体标签:
+                        <ul>
+                            <li>img: 图片标签,用于插入图片<br>
+                                从技术上讲，实际上并没有将图像插入到网页中，而是将图像链接到了网页。<img> 标签创建了一个容器，用于引用图像。<br>
+                                图像的格式可以是 GIF、JPG、PNG、BMP、SVG 等。<br>
+                                可被超链接标签包裹，点击图片时跳转至别的页面。<span class="bt">标题处的GIF就是</span><br>
+                                标签一般有两个属性：<br>
+                                src - 规定图像的路径<br>
+                                alt - 如果由于某种原因无法显示图像，则指定图像的替代文本<br>
+                                <div class="dm">
+                                    <div class="littlebox" style="width: 150px;">
+                                        &lt;img&gt;
+                                    </div>
+                                    <div>👉<br>👉</div>
+                                    <img src="../img/Minecraft.gif">
+                                    <img src="../img/" alt="图片加载失败">
+                                </div>
+                            </li>
+                            <li>
+                                audio: 音频标签,用于插入音频<br>
+                                或许你一进入此页面就发现网页自动播放了音乐<br>
+                                这正是audio标签的作用,tag可以播放音频文件,并可以控制播放的属性,比如循环播放、自动播放等。<br>
+                                &lt;audio&gt; 标签可包含一个或多个拥有不同音频源的 &lt;source&gt;标签。浏览器将选择它支持的第一个源。<br>
+                                标签一般有一个属性：<br>
+                                src - 规定音频文件的路径<br>
+                                但也有时候会有以下属性：<br>
+                                controls - 规定是否显示播放控制按钮<br>
+                                autoplay - 规定是否自动播放<br>
+                                loop - 规定是否循环播放<br>
+                                <div class="dm">
+                                    <div class="littlebox" style="width: 150px;">
+                                        &lt;audio&gt;
+                                    </div>
+                                    <div>👉<br>👉</div>
+                                    <audio controls="controls" autoplay="autoplay" loop="loop">
+                                <div class="dm">
+                                    <div class="littlebox" style="width:150px">
+                                        &lt;audio&gt;&lt;/audio&gt;
+                                    </div>
+                                    <div>👉<br>👉</div>
+                                    <audio controls="controls" src="../music/咖啡因乐队 - 成长的路口.mp3" autoplay="autoplay" loop="loop">
+                                    </audio>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right">
+                0X3F大佬的算法学习题单:<a href="https://leetcode.cn/circle/discuss/RvFUtj/" target="_parent">o(*￣▽￣*)ブ</a>
+                <br>
+                html参考技术文档:<a href="https://www.w3school.com.cn/tags/index.asp" target="_blank">（￣︶￣）↗</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
