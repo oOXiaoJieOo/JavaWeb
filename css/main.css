@@ -62,6 +62,7 @@ body{
 }
 
 .text-right{
+    padding:15px;
     width:30%;
     border-left: 1px solid #cdcdcd;
 }

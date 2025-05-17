@@ -32,7 +32,8 @@
                 <div class="time">2025/5/12</div>
             </div>
             <div>
-                日后在此块内“抄袭”其他网站的抽屉实现逻辑>:)
+                文灏！<br>
+                文森！<br>
             </div>
         </div>
         <div class="text-all text">
@@ -214,78 +215,84 @@
                             其一般有以下属性:<br>
                             action - 规定当提交表单时向何处发送表单数据<br>
                             method - 规定用于发送表单数据的 HTTP 方法(get/post)<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;get - 数据添加至url后面,可通过url直接获取数据,安全性较差<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;post - 数据以表单形式发送,安全性较高,但数据量较大时会受到限制<br>
-                            <ul>
-                                <li>
-                                    <h4>&lt;input&gt;</h4>
-                                    用于创建文本框、密码框、单选框、复选框<br>
-                                    该标签一般具备以下属性:<br>
-                                    type - 规定输入控件的类型<br>
-                                    name - 规定输入控件的名称(用于提交表单中的数据、匹配单选框、复选框的选择项)<br>
-                                    也有其他可选的常用属性:
-                                    value - 规定输入控件的默认值,而在单选框、复选框中则表示选择的选项在提交表单时提交的数据<br>
-                                    size - 规定输入控件的宽度(以字符计)<br>
-                                    disabled - 规定输入控件是否被禁用<br>
-                                    readonly - 规定输入控件是否是只读的<br>
-                                    placeholder - 规定输入控件的提示文本<br>
-                                    <ul>
-                                        <li>
-                                            <h5>文本框</h5>
-                                            其中typed属性为text,用于创建<apen style="color:red">单行</apen>文本框<br>
-                                            <div class="dm">
-                                                <div class="littlebox" style="width:150px">
-                                                    &lt;input type="text"&gt;
-                                                </div>
-                                                <div>👉<br>👉</div>
-                                                <div><input type="text"></div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <h5>密码框</h5>
-                                            其中typed属性为password,用于创建密码框<br>
-                                            <div class="dm">
-                                                <div class="littlebox" style="width:150px">
-                                                    &lt;input type="password"&gt;
-                                                </div>
-                                                <div>👉<br>👉</div>
-                                                <div><input type="password"></div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                        <form>
-                                            <h5>单选框</h5>
-                                            其中typed属性为radio,用于创建多选一的单选框<br>
-                                            根据name属性进行分组且同一组内互斥
-                                            <div class="dm">
-                                                <div class="littlebox" style="width:150px">
-                                                    &lt;input type="radio" name=" sex"&gt;男
-                                                    &lt;input type="radio" name=" sex"&gt;女
-                                                    &lt;input type="radio" name=" Job"&gt;老师
-                                                    &lt;input type="radio" name=" Job"&gt;学生
-                                                </div>
-                                                <div>👉<br>👉</div>
-                                                <div>
-                                                <div style="border:1px #000000 solid;">
-                                                    <form>
-                                                        性别(name="sex")<br>
-                                                        <input type="radio" name="sex">男<br>
-                                                        <input type="radio" name="sex">女<br>
-                                                        职业(name="Job")<br>
-                                                        <input type="radio" name="Job">老师<br>
-                                                        <input type="radio" name="Job">学生<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get - 数据添加至url后面,可通过url直接获取数据,安全性较差<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;post - 数据以表单形式发送,安全性较高,但数据量较大时会受到限制<br>
+                                <h4>input标签:</h4>
+                                <div style="padding: 15px;">
+                                    主要的表单输入标签 <br>
+                                    一般有以下属性:<br>
+                                    type - 规定输入控件的类型(text/password/submit/reset/button/file)<br>
+                                    name - 规定提交的函数名称<br><br>
+
+                                    以下示例将action定位到当前页面,并且将对应函数名称设置为对应函数以便直白地展示表达提交时各个属性的作用:<br>
+                                    结果请看地址栏处的url
+                                    <div style="padding: 15px;">
+                                        <ul>
+                                            <li>
+                                                单行文本框:<br>
+                                                type="text"
+                                                <div class="dm">
+                                                    <div class="littlebox">
+                                                        &lt;input type="text" name="text"&gt;<br>
+                                                        &lt;input type="submit" value="提交"&gt;
+                                                    </div>
+                                                    <div>👉<br>👉</div>
+                                                    <form action="./tags-KeyPoint.html" method="get">
+                                                        <input type="text" name="text"><br>
+                                                        <input type="submit" value="提交">
                                                     </form>
                                                 </div>
-                                                由此可见同一组内只能选一个,而不同组之间则不互斥。
+                                            </li>
+                                            <li>
+                                                密码输入框:<br>
+                                                type="password"<br>
+                                                可以发现与单行文本框不同的是，输入的内容会自动被隐藏，可提交后(由于method="get")还是会被赤裸裸地展示在url之中<br>
+                                                <div class="dm">
+                                                    <div class="littlebox">
+                                                        &lt;input type="password" name="password"&gt;<br>
+                                                        &lt;input type="submit" value="提交"&gt;
+                                                    </div>
+                                                    <div>👉<br>👉</div>
+                                                    <form action="./tags-KeyPoint.html" method="get">
+                                                        <input type="password" name="password"><br>
+                                                        <input type="submit" value="提交">
+                                                    </form>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                                            </li>
+                                            <li>
+                                                单选按钮:<br>
+                                                type="radio"
+                                                在表单内，多个单选标签按name属性分组，同一小组内的单选标签智能选其一<br>
+                                                以下示例可以发现，<br>
+                                                男/女由于在同一分组(name="sex")选了其中一项另外一个就会自动取消选中<br>
+                                                而老师/学生由于与男/女在不同的分组(name="job")，即使在男/女选中之后选择其一也不会被自动取消选中<br>
+                                                但老师/学生在同一分组(name = "job")，所以在选择其中一项后，另一项会自动取消选中<br> 
+                                                <div class="dm">1
+                                                    <div class="littlebox">
+                                                        &lt;input type="radio" name="sex" value="male"&gt;男<br>
+                                                        &lt;input type="radio" name="sex" value="female"&gt;女<br>
+                                                        &lt;input type="radio" name="job" value="teacher"&gt;老师<br>
+                                                        &lt;input type="radio" name="job" value="student"&gt;学生<br>
+                                                        &lt;input type="submit" value="提交"&gt;
+                                                    </div>
+                                                    <div>👉<br>👉</div>
+                                                    <form action="./tags-KeyPoint.html" method="get" style="border: black 1px solid;width: 75px;">
+                                                        <input type="radio" name="sex" value="male">男<br>
+                                                        <input type="radio" name="sex" value="female">女<br>
+                                                        <input type="radio" name="job" value="teacher">老师<br>
+                                                        <input type="radio" name="job" value="student">学生<br>
+                                                        <input type="submit" value="提交">
+                                                    </form>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                多选按钮:<br>
+                                                type="checkbox"
+                                                在表单内，多个多选标签按name属性分组，同一小组内的多选标签可以多选<br>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                 </div>
