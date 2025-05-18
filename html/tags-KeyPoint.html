@@ -208,6 +208,8 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div style="border-bottom: 1px #ccc solid;">
                         <div>
                             <h3>表单标签&lt;form&gt; &lt;/form&gt;:</h3>
                             用于实现用户在界面上输入各种信息并将其提交的一种标签,<br>
@@ -217,6 +219,7 @@
                             method - 规定用于发送表单数据的 HTTP 方法(get/post)<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get - 数据添加至url后面,可通过url直接获取数据,安全性较差<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;post - 数据以表单形式发送,安全性较高,但数据量较大时会受到限制<br>
+                            <div style="padding:15px;">
                                 <h4>input标签:</h4>
                                 <div style="padding: 15px;">
                                     主要的表单输入标签 <br>
@@ -266,8 +269,8 @@
                                                 以下示例可以发现，<br>
                                                 男/女由于在同一分组(name="sex")选了其中一项另外一个就会自动取消选中<br>
                                                 而老师/学生由于与男/女在不同的分组(name="job")，即使在男/女选中之后选择其一也不会被自动取消选中<br>
-                                                但老师/学生在同一分组(name = "job")，所以在选择其中一项后，另一项会自动取消选中<br> 
-                                                <div class="dm">1
+                                                但老师/学生在同一分组(name = "job")，所以在选择其中一项后，另一项会自动取消选中<br>
+                                                <div class="dm">
                                                     <div class="littlebox">
                                                         &lt;input type="radio" name="sex" value="male"&gt;男<br>
                                                         &lt;input type="radio" name="sex" value="female"&gt;女<br>
@@ -276,9 +279,10 @@
                                                         &lt;input type="submit" value="提交"&gt;
                                                     </div>
                                                     <div>👉<br>👉</div>
-                                                    <form action="./tags-KeyPoint.html" method="get" style="border: black 1px solid;width: 75px;">
-                                                        <input type="radio" name="sex" value="male">男<br>
-                                                        <input type="radio" name="sex" value="female">女<br>
+                                                    <form action="./tags-KeyPoint.html" method="get"
+                                                        style="border: black 1px solid;width: 75px;">
+                                                        <input type="radio" name="sex" value="man">男<br>
+                                                        <input type="radio" name="sex" value="woman">女<br>
                                                         <input type="radio" name="job" value="teacher">老师<br>
                                                         <input type="radio" name="job" value="student">学生<br>
                                                         <input type="submit" value="提交">
@@ -289,10 +293,113 @@
                                                 多选按钮:<br>
                                                 type="checkbox"
                                                 在表单内，多个多选标签按name属性分组，同一小组内的多选标签可以多选<br>
+                                                <div class="dm">
+                                                    <div class="littlebox">
+                                                        &lt;input type="checkbox" name="hobby" value="reading"&gt;阅读<br>
+                                                        &lt;input type="checkbox" name="hobby"
+                                                        value="swimming"&gt;游泳<br>
+                                                        &lt;input type="checkbox" name="hobby" value="running"&gt;跑步<br>
+                                                        &lt;input type="submit" value="提交"&gt;
+                                                    </div>
+                                                    <div>👉<br>👉</div>
+                                                    <form action="./tags-KeyPoint.html" method="get"
+                                                        style="border: black 1px solid;width: 150px;">
+                                                        <input type="checkbox" name="hobby" value="reading">阅读<br>
+                                                        <input type="checkbox" name="hobby" value="swimming">游泳<br>
+                                                        <input type="checkbox" name="hobby" value="running">跑步<br>
+                                                        <input type="submit" value="提交">
+                                                    </form>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                按钮:<br>
+                                                type一般为submit/reset/button<br>
+                                                用于提交表单/重置表单/触发按钮事件<br>
+                                                上面示例很好地展示了submit的功能，略过，以下展示另两种按钮的用法:<br>
+                                                <ul>
+                                                    <li>
+                                                        重置按钮(reset):<br>
+                                                        用于清空表单内容<br>
+                                                        一般与submit按钮配合使用，点击重置按钮后，表单内容会被清空，但不会提交<br>
+                                                        <div class="dm">
+                                                            <div class="littlebox">
+                                                                &lt;input type="text" placeholder="请输入任意内容"&gt;<br>
+                                                                &lt;input type="reset" value="重置"&gt;
+                                                            </div>
+                                                            <div>👉<br>👉</div>
+                                                            <form action="./tags-KeyPoint.html" method="get">
+                                                                <input type="text" placeholder="请输入任意内容"><br>
+                                                                <input type="reset" value="重置">
+                                                            </form>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        普通按钮(button):<br>
+                                                        点击后无效果，需要配合js实现功能<br>
+                                                        属性中添加onclick="方法名()"属性以及引入相关js文件后即可实现按钮功能<br>
+                                                        然鹅也能在onclick属性中写js代码，不过不推荐<br>
+                                                        <div class="dm">
+                                                            <div class="littlebox">
+                                                                &lt;button type="button" onclick="alert('Hello
+                                                                World!')"&gt;点击&lt;/button&gt;
+                                                            </div>
+                                                            <div>👉<br>👉</div>
+                                                            <button type="button"
+                                                                onclick="alert('Hello World!')">点击</button>
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
+                                <div>
+                                    <h4>select标签:</h4>
+                                    用于创建下拉列表，一般与option标签配合使用<br>
+                                    其一般有以下属性:<br>
+                                    name - 规定提交的函数名称<br>
+                                    size - 规定下拉列表的显示行数<br>
+                                    <div class="dm">
+                                        <div class="littlebox">
+                                            &lt;select name="select"&gt;<br>
+                                            &nbsp;&nbsp;&lt;option value="1"&gt;选项1&lt;/option&gt;<br>
+                                            &nbsp;&nbsp;&lt;option value="2"&gt;选项2&lt;/option&gt;<br>
+                                            &nbsp;&nbsp;&lt;option value="3"&gt;选项3&lt;/option&gt;<br>
+                                            &lt;/select&gt;<br>
+                                            &lt;input type="submit" value="提交"&gt;
+                                        </div>
+                                        <div>👉<br>👉</div>
+                                        <form action="./tags-KeyPoint.html" method="get">
+                                            <select name="select">
+                                                <option value="1">选项1</option>
+                                                <option value="2">选项2</option>
+                                                <option value="3">选项3</option>
+                                            </select>
+                                            <input type="submit" value="提交">
+                                        </form>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4>textarea标签:</h4>
+                                    用于创建多行文本输入框，其一般有以下属性:<br>
+                                    name - 规定提交的函数名称<br>
+                                    rows - 规定文本框的显示行数<br>
+                                    cols - 规定文本框的显示列数<br>
+                                    <div class="dm">
+                                        <div>
+                                        <div class="littlebox">
+                                            &lt;textarea name="textarea" rows="5" cols="20"&gt;&lt;/textarea&gt;<br>
+                                            &lt;input type="submit" value="提交"&gt;
+                                        </div>
+                                        </div>
+                                        <div>👉<br>👉</div>
+                                        <form action="./tags-KeyPoint.html" method="get">
+                                            <textarea name="textarea" rows="5" cols="20"></textarea><br>
+                                            <input type="submit" value="提交">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
